@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    >
+
+    <include layout="@layout/action_bar_global"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/space_1"
+            android:layout_weight="1"
+            android:background="@color/colorChoose3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:paddingTop="@dimen/space_36"
+                    android:src="@drawable/ic_umpire_main"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="Umpire-1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_large"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/buttonUmpire1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_button_rect_trans"
+                android:clickable="true"
+                android:padding="@dimen/space_16"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_1"
+            android:layout_marginTop="@dimen/space_2"
+            android:layout_weight="1"
+            android:background="@color/colorChoose4">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:paddingTop="@dimen/space_36"
+                    android:src="@drawable/ic_umpire_main_2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="Umpire-2"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_large"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/buttonUmpire"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_button_rect_trans"
+                android:clickable="true"
+                android:padding="@dimen/space_16"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/space_1"
+            android:layout_marginTop="@dimen/space_2"
+            android:layout_weight="1"
+            android:background="@color/colorChoose2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_umpire_main_2"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="LBW"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_large"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/buttonLBW"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_button_rect_trans"
+                android:clickable="true"
+                android:padding="@dimen/space_16"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space_1"
+            android:layout_marginTop="@dimen/space_2"
+            android:layout_weight="1"
+            android:background="@color/colorChoose1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/space_16">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_umpire_main_2"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:text="Snick"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/font_large"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/buttonSnick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_button_rect_trans"
+                android:clickable="true"
+                android:padding="@dimen/space_16"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_2"
+        android:layout_marginTop="@dimen/space_4"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_1"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_rect_blue"
+            android:text="Logout"
+            android:textColor="@color/colorWhite"/>
+
+        <Button
+            android:id="@+id/buttonFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/space_1"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_rect_gray"
+            android:text="Finish"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+</LinearLayout>

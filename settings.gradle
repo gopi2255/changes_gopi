@@ -1,0 +1,1 @@
+include ':app', ':lib_camera',  ':lib_player_core', ':lib_player', ':lib_server'

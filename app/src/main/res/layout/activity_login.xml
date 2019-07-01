@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_global"/>
+
+    <LinearLayout
+        style="@style/MatchMatch.Vertical"
+        android:padding="@dimen/space_40">
+
+        <TextView
+            android:id="@+id/textRole"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/font_title"
+            android:text="Umpire"
+            android:textColor="@color/colorDarkGray"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_marginTop="@dimen/space_20"
+            style="@style/MatchWrap"
+            android:layout_height="@dimen/space_45"
+            android:background="@drawable/shape_frame_gray"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/space_8"/>
+
+        <EditText
+            android:id="@+id/editPassword"
+            style="@style/MatchWrap"
+            android:layout_height="@dimen/space_45"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/shape_frame_gray"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="@dimen/space_8"/>
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:textColor="@color/colorWhite"
+            android:text="Login"
+            android:background="@drawable/selector_button_rect_green"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_height="@dimen/space_45"/>
+
+    </LinearLayout>
+
+</LinearLayout>

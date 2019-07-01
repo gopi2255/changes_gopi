@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_global"/>
+
+    <LinearLayout
+        style="@style/MatchMatch.Vertical"
+        android:padding="@dimen/space_40">
+
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/font_title"
+            android:text="Result"
+            android:textColor="@color/colorDarkGray"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/buttonClose"
+            android:textColor="@color/colorWhite"
+            android:text="Close"
+            android:background="@drawable/selector_button_rect_green"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/space_20"
+            android:layout_height="@dimen/space_45"/>
+
+    </LinearLayout>
+
+</LinearLayout>

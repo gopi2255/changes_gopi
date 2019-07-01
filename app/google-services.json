@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "612582449680",
+    "firebase_url": "https://development-6e97b.firebaseio.com",
+    "project_id": "development-6e97b",
+    "storage_bucket": "development-6e97b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612582449680:android:f8af4c2fb7044d5d",
+        "android_client_info": {
+          "package_name": "com.groupchat.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612582449680-dn6c3ja7t3av4et7nq2fronu993ds10o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkKMXCPCwj8FoMMjJkd4fTr7fGvEkmkg4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612582449680:android:206f03cb7d986c25",
+        "android_client_info": {
+          "package_name": "com.umpee.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612582449680-dn6c3ja7t3av4et7nq2fronu993ds10o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkKMXCPCwj8FoMMjJkd4fTr7fGvEkmkg4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

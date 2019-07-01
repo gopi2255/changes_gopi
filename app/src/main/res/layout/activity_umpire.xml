@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch"
+    android:orientation="vertical">
+
+    <include layout="@layout/action_bar_global"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        style="@style/MatchMatch.Vertical"
+        android:padding="@dimen/space_32">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/layoutContent"
+                style="@style/MatchWrap.Vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/space_16"
+                    android:gravity="center"
+                    android:text="Saved Video"
+                    android:textColor="@color/colorDarkGray"
+                    android:textSize="@dimen/space_20"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                    <ImageView
+                        android:id="@+id/imageThumb"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"/>
+
+                    <ImageButton
+                        android:id="@+id/buttonPlay"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/player_button_circle"
+                        android:paddingLeft="@dimen/space_12"
+                        android:paddingRight="@dimen/space_8"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_button_play"
+                        android:tint="@color/colorGray"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    style="@style/MatchWrap.Horizontal"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Start :"/>
+
+                    <TextView
+                        android:id="@+id/textStart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="@dimen/font_medium"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MatchWrap.Horizontal"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="End :"/>
+
+                    <TextView
+                        android:id="@+id/textEnd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="@dimen/font_medium"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MatchWrap.Horizontal"
+                    android:layout_marginTop="@dimen/space_8"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="Duration :"/>
+
+                    <TextView
+                        android:id="@+id/textDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorDarkGray"
+                        android:textSize="@dimen/font_medium"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textNoVideo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_32"
+                android:gravity="center"
+                android:padding="@dimen/space_20"
+                android:text="There is no video recorded yet"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="@dimen/font_large"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_16"
+            android:background="@drawable/selector_button_rect_red"
+            android:text="Record New video"
+            android:textColor="@color/colorWhite"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonLogout"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:background="@drawable/selector_button_rect_blue"
+                android:text="Logout"
+                android:layout_marginRight="@dimen/space_8"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/buttonFinish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_16"
+                android:background="@drawable/selector_button_rect_gray"
+                android:text="Finish"
+                android:layout_marginLeft="@dimen/space_8"
+                android:textColor="@color/colorWhite"/>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

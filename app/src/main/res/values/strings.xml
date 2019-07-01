@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Umpee</string>
+    <string name="string_3rd_umpire">3<super>rd</super> Umpire</string>
+    <string name="error_network">Maybe network disconnected.</string>
+    <string name="error_unknown_issue">App got some issues</string>
+    <string name="string_umpire">Umpire</string>
+    <string name="msg_field_required">This field is required</string>
+    <string name="msg_email_invalid">Invalid email</string>
+</resources>
