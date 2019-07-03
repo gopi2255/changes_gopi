@@ -23,6 +23,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -30,22 +31,22 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:' + project.supportVersion
     compile 'com.android.support:design:' + project.supportVersion
-    compile 'com.yanzhenjie.nohttp:nohttp:1.1.2'
+    implementation 'com.yanzhenjie.nohttp:nohttp:1.1.2'
 //    compile 'com.yanzhenjie:andserver:1.0.3'
-    compile 'com.yanzhenjie:loading:1.0.0'
+    implementation 'com.yanzhenjie:loading:1.0.0'
 
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-    compile 'com.afollestad.material-dialogs:core:0.9.1.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    implementation 'com.afollestad.material-dialogs:core:0.9.1.0'
 
-    compile 'com.google.firebase:firebase-core:11.0.0'
-    compile 'com.google.firebase:firebase-messaging:11.0.0'
+    implementation 'com.google.firebase:firebase-core:11.0.0'
+    implementation 'com.google.firebase:firebase-messaging:11.0.0'
 
-    compile project (':lib_camera')
-    compile project (':lib_player_core')
-    compile project (':lib_player')
-    compile project (':lib_server')
+    compile project(':lib_camera')
+    compile project(':lib_player_core')
+    compile project(':lib_player')
+    compile project(':lib_server')
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

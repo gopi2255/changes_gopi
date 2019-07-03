@@ -3,6 +3,7 @@ package com.umpee.app.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.content.Intent;
 
 import com.umpee.app.R;
 import com.umpee.app.cache.Cache;
@@ -14,6 +15,7 @@ import com.umpee.app.server.ServiceReceiver;
 import com.umpee.app.utils.ObjectUtils;
 
 import java.util.ArrayList;
+
 
 public class UmpireThirdActivity extends CustomActivity implements View.OnClickListener {
     protected View buttonUmpire1;
@@ -82,7 +84,9 @@ public class UmpireThirdActivity extends CustomActivity implements View.OnClickL
                 }
             });
         } else if (view.getId() == R.id.buttonLBW) {
-            makeToast("Coming soon.");
+            makeToast("Coming soon. WEY");
+            Intent i = new Intent(this, UmpireThirdOptionsActivity.class);
+            startActivity(i);
         } else if (view.getId() == R.id.buttonSnick) {
             makeToast("Coming soon.");
         } else if (view.getId() == R.id.buttonLogout) {

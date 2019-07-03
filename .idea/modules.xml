@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Gopi.iml" filepath="$PROJECT_DIR$/Gopi.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/changes_gopi.iml" filepath="$PROJECT_DIR$/changes_gopi.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_camera/lib_camera.iml" filepath="$PROJECT_DIR$/lib_camera/lib_camera.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_player/lib_player.iml" filepath="$PROJECT_DIR$/lib_player/lib_player.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_player_core/lib_player_core.iml" filepath="$PROJECT_DIR$/lib_player_core/lib_player_core.iml" />
