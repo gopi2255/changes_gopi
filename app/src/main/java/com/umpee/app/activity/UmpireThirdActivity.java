@@ -84,7 +84,7 @@ public class UmpireThirdActivity extends CustomActivity implements View.OnClickL
                 }
             });
         } else if (view.getId() == R.id.buttonLBW) {
-            makeToast("Coming soon. WEY");
+            //makeToast("Coming soon.");
             Intent i = new Intent(this, UmpireThirdOptionsActivity.class);
             startActivity(i);
         } else if (view.getId() == R.id.buttonSnick) {

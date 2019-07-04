@@ -23,7 +23,8 @@
             android:layout_width="204dp"
             android:layout_height="match_parent"
             android:background="#4CAF50"
-            android:orientation="vertical">
+            android:onClick="goto_animation"
+            android:orientation="horizontal">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -31,11 +32,13 @@
                 android:layout_marginTop="@dimen/space_2"
                 android:layout_marginRight="@dimen/space_1"
                 android:layout_weight="1"
-                android:background="@color/colorChoose2">
+                android:background="@color/colorChoose2"
+                android:onClick="goto_animation">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:onClick="goto_animation"
                     android:orientation="vertical">
 
                     <TextView
@@ -44,6 +47,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/space_20"
                         android:layout_marginTop="@dimen/space_320"
+                        android:onClick="goto_animation"
                         android:text="Animation"
                         android:textColor="@color/colorWhite"
                         android:textSize="36sp" />
@@ -60,12 +64,14 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="348dp"
-                android:background="@color/colorChoose3">
+                android:background="@color/colorChoose3"
+                android:onClick="goto_main_view">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:onClick="goto_main_view"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textViewMainView"
@@ -73,6 +79,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/space_32"
                         android:layout_marginTop="@dimen/space_150"
+                        android:onClick="goto_main_view"
                         android:text="Main View"
                         android:textColor="@color/colorWhite"
                         android:textSize="30sp" />
@@ -82,12 +89,14 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorChoose1">
+                android:background="@color/colorChoose1"
+                android:onClick="goto_leg_view">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:onClick="goto_leg_view"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/textViewLegView"
@@ -95,6 +104,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/space_32"
                         android:layout_marginTop="@dimen/space_150"
+                        android:onClick="goto_leg_view"
                         android:text="TextView"
                         android:textColor="@color/colorWhite"
                         android:textSize="30sp" />

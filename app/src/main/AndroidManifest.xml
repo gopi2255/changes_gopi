@@ -18,7 +18,10 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.UmpireThirdOptionsActivity"></activity>
+        <activity android:name=".activity.UmpireThirdOptionLegViewActivity"></activity>
+        <activity android:name=".activity.UmpireThirdOptionMainViewActivity" />
+        <activity android:name=".activity.UmpireThirdOptionAnimationActivity" />
+        <activity android:name=".activity.UmpireThirdOptionsActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -44,12 +47,12 @@
             android:name=".activity.CameraActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
-            android:theme="@style/ThemeFullscreen"></activity>
+            android:theme="@style/ThemeFullscreen" />
         <activity
             android:name=".activity.PlayerActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="sensor"
-            android:theme="@style/ThemeFullscreen"></activity>
+            android:theme="@style/ThemeFullscreen" />
         <activity
             android:name=".activity.SelectRoleActivity"
             android:configChanges="orientation|screenSize"
