@@ -132,7 +132,7 @@ public class Network {
         });
     }
 
-    private static void makeToast(String string) {
+    public static void makeToast(String string) {
         Toast.makeText(MyApp.getContext(), string, Toast.LENGTH_SHORT).show();
     }
 }
