@@ -10,7 +10,12 @@
         android:id="@+id/containerOptions"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="@dimen/space_toolbar_height"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +25,7 @@
 
         <LinearLayout
             android:id="@+id/containerAnimationOption"
-            android:layout_width="204dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:background="#4CAF50"
             android:onClick="goto_animation"
@@ -105,7 +110,7 @@
                         android:layout_marginLeft="@dimen/space_32"
                         android:layout_marginTop="@dimen/space_150"
                         android:onClick="goto_leg_view"
-                        android:text="TextView"
+                        android:text="Leg View"
                         android:textColor="@color/colorWhite"
                         android:textSize="30sp" />
                 </LinearLayout>

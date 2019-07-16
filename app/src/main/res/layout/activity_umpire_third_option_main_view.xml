@@ -6,75 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".activity.UmpireThirdOptionMainViewActivity">
 
-    <VideoView
-        android:id="@+id/vv1"
+    <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="wrap_content"
-        android:layout_height="350dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <VideoView
+            android:id="@+id/vv1"
+            android:layout_width="match_parent"
+            android:layout_height="650dp"
+            android:layout_marginBottom="8dp"
+            android:onClick="slow_motion_14" />
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vv1">
+        app:layout_constraintTop_toBottomOf="@+id/frame_layout">
 
         <Button
-            android:id="@+id/rewind"
+            android:id="@+id/slowmo14"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="rewind"
-            android:text="Rewind" />
+            android:onClick="slow_motion_14"
+            android:text="1/4X" />
 
         <Button
-            android:id="@+id/play_pause"
+            android:id="@+id/slowmo12"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="play_pause"
-            android:text="Pause" />
+            android:onClick="slow_motion_12"
+            android:text="1/2X" />
 
         <Button
-            android:id="@+id/slowmotion"
+            android:id="@+id/slowmo34"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="slomo"
-            android:text="Slo mo" />
+            android:onClick="slow_motion_34"
+            android:text="3/4X" />
 
         <Button
-            android:id="@+id/ff"
+            android:id="@+id/normal"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="forward"
-            android:text="FF" />
+            android:onClick="normal_motion"
+            android:text="Normal" />
 
     </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/video_progress"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vv1" />
 </android.support.constraint.ConstraintLayout>
