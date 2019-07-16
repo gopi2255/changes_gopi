@@ -1,157 +1,74 @@
 package com.umpee.app.activity;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
+import android.media.MediaPlayer;
+import android.media.PlaybackParams;
 import android.net.Uri;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
-import android.widget.ProgressBar;
 import android.widget.VideoView;
 
 import com.umpee.app.R;
 
-import static com.umpee.app.network.Network.makeToast;
-
 public class UmpireThirdOptionMainViewActivity extends AppCompatActivity {
 
     VideoView vv1;
-    Button btn_play_pause;
-    Button btn_rewind;
-    Button btn_fast_forward;
-    Button btn_slow_motion;
+    Button btn_slomo12;
+    Button btn_slomo14;
+    Button btn_slomo34;
+    Button btn_normal;
 
-    ProgressBar video_progress;
-
-    Thread t;
-    int stopPosition = 0;
-    int interval_play_pause = 600;
+    private MediaPlayer mpl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_umpire_third_option_main_view);
 
-        btn_play_pause = (Button)findViewById(R.id.play_pause);
-        btn_rewind = (Button)findViewById(R.id.rewind);
-        btn_fast_forward = (Button)findViewById(R.id.ff);
-        btn_slow_motion = (Button)findViewById(R.id.slowmotion);
-
-        video_progress = (ProgressBar)findViewById(R.id.video_progress);
-        video_progress.setMax(100);
+        btn_slomo12 = (Button)findViewById(R.id.slowmo12);
+        btn_slomo14 = (Button)findViewById(R.id.slowmo14);
+        btn_slomo34 = (Button)findViewById(R.id.slowmo34);
+        btn_normal = (Button)findViewById(R.id.normal);
 
         vv1 = (VideoView)findViewById(R.id.vv1);
         String main_view_video = getIntent().getStringExtra("url_main_view_video");
         Uri uri = Uri.parse(main_view_video);
-
-        //vv1.setMediaController(new MediaController(this));
+        vv1.setMediaController(new MediaController(this));
         vv1.setVideoURI(uri);
-        //vv1.requestFocus();
-        vv1.start();
-    }
 
-    public void play_pause(View view){
-        //t.interrupt();
-
-        if (vv1.isPlaying()){
-            stopPosition = vv1.getCurrentPosition();
-            vv1.pause();
-            btn_play_pause.setText("Play");
-        }else{
-            vv1.seekTo(stopPosition);
-            vv1.start();
-            btn_play_pause.setText("Pause");
-        }
-
-        int current = vv1.getCurrentPosition();
-        int duration = vv1.getDuration();
-        double value = current*(100/duration);
-        int int_value = (int)value;
-        video_progress.setProgress(int_value);
-    }
-
-    public void rewind(View view)
-    {
-        if (vv1 == null) {
-            return;
-        }
-
-        //t.interrupt();
-
-        vv1.seekTo(0);
-        vv1.start();
-        //btn_play_pause.setText("Play");
-
-        int current = vv1.getCurrentPosition();
-        int duration = vv1.getDuration();
-        double value = current*(100/duration);
-        int int_value = (int)value;
-        video_progress.setProgress(int_value);
-    }
-
-    public void forward(View view)
-    {
-        if (vv1 == null) {
-            return;
-        }
-        //t.interrupt();
-
-        int pos = vv1.getCurrentPosition();
-        pos += 1000; // milliseconds
-        vv1.seekTo(pos);
-        vv1.start();
-
-        int current = vv1.getCurrentPosition();
-        int duration = vv1.getDuration();
-        double value = current*(100/duration);
-        int int_value = (int)value;
-        video_progress.setProgress(int_value);
-    }
-
-    public void slomo(View view){
-        stopPosition = 0;
-        vv1.pause();
-        vv1.start();
-
-        t=new Thread(){
+        vv1.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
-            public void run(){
-                while(!isInterrupted()){
-                    try {
-                        Thread.sleep(interval_play_pause);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (vv1.isPlaying()){
-                                    interval_play_pause = 500;
-                                    stopPosition = vv1.getCurrentPosition();
-                                    vv1.pause();
-                                }else{
-                                    interval_play_pause = 2000;
-                                    vv1.seekTo(stopPosition);
-                                    vv1.start();
-                                }
-
-                                int current = vv1.getCurrentPosition();
-                                int duration = vv1.getDuration();
-                                double value = current*(100/duration);
-                                int int_value = (int)value;
-                                video_progress.setProgress(int_value);
-                            }
-                        });
-                    }catch(InterruptedException e) {
-                        e.printStackTrace();
-                        t.interrupt();
-                    }
-                }
+            public void onPrepared(MediaPlayer mp) {
+                //works only from api 23
+                mpl = mp;
+                PlaybackParams myPlayBackParams = new PlaybackParams();
+                myPlayBackParams.setSpeed(1.0f);
+                mp.setPlaybackParams(myPlayBackParams);
+                vv1.requestFocus();
+                vv1.start();
             }
-        };
+        });
+    }
 
-        t.start();
+    public void slow_motion_14(View view){
+        mpl.setPlaybackParams(mpl.getPlaybackParams().setSpeed(0.25f));
+        vv1.start();
+    }
+
+    public void slow_motion_12(View view){
+        mpl.setPlaybackParams(mpl.getPlaybackParams().setSpeed(0.5f));
+        vv1.start();
+    }
+
+    public void slow_motion_34(View view){
+        mpl.setPlaybackParams(mpl.getPlaybackParams().setSpeed(0.75f));
+        vv1.start();
+    }
+
+    public void normal_motion(View view){
+        mpl.setPlaybackParams(mpl.getPlaybackParams().setSpeed(1.0f));
+        vv1.start();
     }
 }
