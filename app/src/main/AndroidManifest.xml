@@ -18,7 +18,9 @@
         android:largeHeap="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.UmpireThirdOptionLegViewActivity"></activity>
+        <activity android:name=".activity.Umpire_2"></activity>
+        <activity android:name=".activity.Umpire_1" />
+        <activity android:name=".activity.UmpireThirdOptionLegViewActivity" />
         <activity android:name=".activity.UmpireThirdOptionMainViewActivity" />
         <activity android:name=".activity.UmpireThirdOptionAnimationActivity" />
         <activity android:name=".activity.UmpireThirdOptionsActivity" />

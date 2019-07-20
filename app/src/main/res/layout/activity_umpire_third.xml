@@ -36,7 +36,7 @@
                     android:layout_weight="1"
                     android:adjustViewBounds="true"
                     android:paddingTop="@dimen/space_36"
-                    android:src="@drawable/ic_umpire_main"/>
+                    android:src="@drawable/ic_umpire_main" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                     android:layout_marginTop="@dimen/space_8"
                     android:text="Umpire-1"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/font_large"/>
+                    android:textSize="@dimen/font_large" />
             </LinearLayout>
 
             <View
@@ -53,7 +53,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/selector_button_rect_trans"
                 android:clickable="true"
-                android:padding="@dimen/space_16"/>
+                android:padding="@dimen/space_16" />
         </FrameLayout>
 
         <FrameLayout

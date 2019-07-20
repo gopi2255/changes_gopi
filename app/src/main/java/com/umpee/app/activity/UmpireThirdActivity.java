@@ -58,13 +58,14 @@ public class UmpireThirdActivity extends CustomActivity implements View.OnClickL
                 makeToast("No umpires");
                 return;
             }
-            ModelUser user = umpireList.get(0);
+            /*ModelUser user = umpireList.get(0);
             Network.getVideo(user.getPublicURL(), getUser().token, new Network.VideoListener() {
-                @Override
-                public void onGot(ModelVideo result) {
                     startActivity(PlayerActivity.newIntent(mContext, "umpire", result.url));
-                }
-            });
+            });*/
+
+            Intent main_view = new Intent(this, Umpire_1.class);
+            main_view.putExtra("url_main_view_video", "https://wilawaranayra.s3-sa-east-1.amazonaws.com/gopi/main1.5.mp4");
+            startActivity(main_view);
 
         } else if (view.getId() == R.id.buttonUmpire) {
             if (ObjectUtils.isEmpty(umpireList)) {
@@ -76,13 +77,17 @@ public class UmpireThirdActivity extends CustomActivity implements View.OnClickL
                 return;
             }
 
-            ModelUser user = umpireList.get(1);
+            /*ModelUser user = umpireList.get(1);
             Network.getVideo(user.getPublicURL(), getUser().token, new Network.VideoListener() {
                 @Override
                 public void onGot(ModelVideo result) {
                     startActivity(PlayerActivity.newIntent(mContext, "umpire", result.url));
                 }
-            });
+            });*/
+
+            Intent leg_view = new Intent(this, Umpire_2.class);
+            leg_view.putExtra("url_leg_view_video", "https://wilawaranayra.s3-sa-east-1.amazonaws.com/gopi/leg1.5B.mp4");
+            startActivity(leg_view);
         } else if (view.getId() == R.id.buttonLBW) {
             //makeToast("Coming soon.");
             Intent i = new Intent(this, UmpireThirdOptionsActivity.class);
@@ -111,4 +116,5 @@ public class UmpireThirdActivity extends CustomActivity implements View.OnClickL
         buttonFinish = (Button) findViewById(R.id.buttonFinish);
         buttonFinish.setOnClickListener(UmpireThirdActivity.this);
     }
+
 }
